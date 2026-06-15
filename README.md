@@ -10,7 +10,9 @@ D:\project\git_car
 ├── README.md # 本文件
 ├── split_dataset.py #数据集转化为训练集和检测集
 ├── convert.py    #XML转化txt
-
+├── 2026-06-16-032143.mp4 
+├── 20260615-1858-50.2877111.mp4                                               #原视频
+│
 │
 ├── images/ # 图片文件夹
 │ ├── train/ # 训练图片 (80%)
