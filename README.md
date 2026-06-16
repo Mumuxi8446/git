@@ -163,13 +163,13 @@ yolo detect train data=dataset.yaml model=yolov8n.pt epochs=100 device=cpu
 ```
 
 4. 找不到图片或标注
-检查 dataset.yaml 中的路径是否正确：
+>检查 dataset.yaml 中的路径是否正确：
 
-path 是项目根目录
+>path 是项目根目录
 
-train/val 是相对于 path 的路径
+>train/val 是相对于 path 的路径
 
-5. 电脑自动睡眠中断训练
+##5. 电脑自动睡眠中断训练
 ```bash
 powercfg /change standby-timeout-ac 0   # 禁止睡眠
 ```
