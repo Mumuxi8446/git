@@ -28,7 +28,7 @@ D:\project\git_car
 │ └── weights/
 │ ├── best.pt # 最佳模型
 │ └── last.pt # 最后模型
-│└── detect\predict#识别后视频
+│└── detect\predict#识别后视频```
  
 
 ###最佳模型"git_car\runs\detect\train-12"
