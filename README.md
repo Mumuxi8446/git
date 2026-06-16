@@ -66,7 +66,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 
 ##📕🏷️数据标注（LabelImg）
-标注流程：
+###标注流程：
 打开 LabelImg
 
 切换格式：点击 PascalVOC 切换到 YOLO
@@ -82,7 +82,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 
 ##📊 数据集配置
-
+###
 dataset.yaml
 path: D:/project/git_car
 train: images/train
