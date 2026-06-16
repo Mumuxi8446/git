@@ -48,7 +48,7 @@ conda create -n yolo_car python=3.13 -y
 conda activate yolo_car
 ```
 
-###2. 安装 YOLO
+### 2. 安装 YOLO
 
 ```bash
 pip install ultralytics
