@@ -84,7 +84,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 每个图片对应一个 .txt 文件：
 
-🐖若如本人一般不慎忘记切换到yolo，可使用convert.py文件转化
+>🐖若如本人一般不慎忘记切换到yolo，可使用convert.py文件转化
 
 
 ## 📊 数据集配置
