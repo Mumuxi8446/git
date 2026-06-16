@@ -1,8 +1,8 @@
 # RoboMaster 装甲板检测 - YOLO 训练全流程
 
-#从 LabelImg 标注到 YOLO 训练部署的完整记录
+> 从 LabelImg 标注到 YOLO 训练部署的完整记录
 
-#📁 项目结构
+###📁 项目结构
 
 D:\project\git_car
 │
@@ -33,7 +33,7 @@ D:\project\git_car
 
 最佳模型"git_car\runs\detect\train-12"
 
-yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
+##yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
 ####清晰视频置信度以0.7为好 快速运动且较模糊置信度需≤0.3
 
 
