@@ -66,6 +66,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 
 ##📕🏷️数据标注（LabelImg）
+
 ###标注流程：
 打开 LabelImg
 
@@ -82,6 +83,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 
 ##📊 数据集配置
+
 ###
 dataset.yaml
 path: D:/project/git_car
@@ -90,22 +92,21 @@ val: images/val
 nc: 2 # 改成你的类别数量
 names: ['red3-4', 'blue3-4']  # 改成你的类别名称
 
-🚀 模型训练
+##🚀 模型训练
 
-#基础训练命令
+###基础训练命令
 conda activate yolo_car
 cd D:\project\git_car
 
 最佳模型"git_car\runs\detect\train-12"
 
-yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
-##如
-#展示#保存#置信度为0.3#
-####清晰视频置信度以0.7为佳 快速运动且较模糊置信度需≤0.3
+###yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3#如
+>展示#保存#置信度为0.3#
+>清晰视频置信度以0.7为佳 快速运动且较模糊置信度需≤0.3
 
-完整参数
-bash
-yolo detect predict model=runs/detect/train-12/weights/best.pt source="视频路径.mp4" show=True save=True conf=0.5 iou=0.5
+###完整参数
+###bash
+###yolo detect predict model=runs/detect/train-12/weights/best.pt source="视频路径.mp4" show=True save=True conf=0.5 iou=0.5
 
 
 场景	conf 推荐值	说明
@@ -121,9 +122,10 @@ imgsz	输入图片尺寸	640
 batch	批次大小	16（GPU） / 4（CPU）
 device	训练设备	（GPU） / （CPU）
 
-输出位置
-text
-runs/detect/predict/视频名称.mp4
+##输出位置
+
+###text
+###runs/detect/predict/视频名称.mp4
 
 
 ⚠️ 常见问题与解决
