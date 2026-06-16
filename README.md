@@ -34,9 +34,10 @@ D:\project\git_car
 
 ###最佳模型"git_car\runs\detect\train-12"
 
-```yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
+```bash
+yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
 ####清晰视频置信度以0.7为好 快速运动且较模糊置信度需≤0.3
-
+```
 
 ## 🛠️ 环境配置
 
@@ -45,25 +46,26 @@ D:\project\git_car
 ```bash
 conda create -n yolo_car python=3.13 -y
 conda activate yolo_car
+```
 
 ###2. 安装 YOLO
 
 ```bash
 pip install ultralytics
-
+```
 
 ###3. 安装 GPU 版 PyTorch（RTX 5070 用）
 
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
-
-#需要安装合适版本  例如：RTX 5070 需要 CUDA 12.8+，使用 cu128 版本
+```
+###需要安装合适版本  例如：RTX 5070 需要 CUDA 12.8+，使用 cu128 版本
 
 ###4. 验证 GPU
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
 # 应输出：True
-
+```
 
 
 ##📕🏷️数据标注（LabelImg）
