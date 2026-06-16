@@ -2,7 +2,7 @@
 
 > 从 LabelImg 标注到 YOLO 训练部署的完整记录
 
-###📁 项目结构
+## 📁 项目结构
 ```bash
 D:\project\git_car
 │
@@ -32,7 +32,7 @@ D:\project\git_car
 ```
  
 
-###最佳模型"git_car\runs\detect\train-12"
+### 最佳模型"git_car\runs\detect\train-12"
 
 ```bash
 yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
