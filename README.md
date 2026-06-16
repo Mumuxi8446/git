@@ -3,7 +3,7 @@
 > 从 LabelImg 标注到 YOLO 训练部署的完整记录
 
 ###📁 项目结构
-```
+```bash
 D:\project\git_car
 │
 ├── dataset.yaml # 数据集配置文件
@@ -28,7 +28,8 @@ D:\project\git_car
 │ └── weights/
 │ ├── best.pt # 最佳模型
 │ └── last.pt # 最后模型
-│└── detect\predict#识别后视频```
+│└── detect\predict#识别后视频
+```
  
 
 ###最佳模型"git_car\runs\detect\train-12"
