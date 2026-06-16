@@ -1,8 +1,8 @@
 # RoboMaster 装甲板检测 - YOLO 训练全流程
 
-> 从 LabelImg 标注到 YOLO 训练部署的完整记录
+#从 LabelImg 标注到 YOLO 训练部署的完整记录
 
-## 📁 项目结构
+#📁 项目结构
 
 D:\project\git_car
 │
@@ -11,7 +11,7 @@ D:\project\git_car
 ├── split_dataset.py #数据集转化为训练集和检测集
 ├── convert.py    #XML转化txt
 ├── 2026-06-16-032143.mp4 
-├── 20260615-1858-50.2877111.mp4                                               #原视频
+├── 20260615-1858-50.2877111.mp4                   #原视频
 │
 │
 ├── images/ # 图片文件夹
@@ -56,7 +56,7 @@ pip install ultralytics
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 
-⚠️ 重要：RTX 5070 需要 CUDA 12.8+，使用 cu128 版本
+#需要安装合适版本  例如：RTX 5070 需要 CUDA 12.8+，使用 cu128 版本
 
 ###4. 验证 GPU
 ```bash
@@ -87,8 +87,8 @@ dataset.yaml
 path: D:/project/git_car
 train: images/train
 val: images/val
-nc: 3  # 改成你的类别数量
-names: ['red3-4', 'blue3-4', '狙击手']  # 改成你的类别名称
+nc: 2 # 改成你的类别数量
+names: ['red3-4', 'blue3-4']  # 改成你的类别名称
 
 🚀 模型训练
 
