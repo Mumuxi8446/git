@@ -80,6 +80,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 框选装甲板，填写类别名称
 
 保存（自动生成 .txt 文件）
+
 每个图片对应一个 .txt 文件：
 
 🐖若如本人一般不慎忘记切换到yolo，可使用convert.py文件转化
@@ -87,32 +88,34 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ##📊 数据集配置
 
-###
+```bash
 dataset.yaml
 path: D:/project/git_car
 train: images/train
 val: images/val
 nc: 2 # 改成你的类别数量
 names: ['red3-4', 'blue3-4']  # 改成你的类别名称
-
+```
 ##🚀 模型训练
 
 ###基础训练命令
+```bash
 conda activate yolo_car
 cd D:\project\git_car
-
+```
 最佳模型"git_car\runs\detect\train-12"
-
-###yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3#如
+```bash
+yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3#如
+```
 >展示#保存#置信度为0.3#
 >清晰视频置信度以0.7为佳 快速运动且较模糊置信度需≤0.3
 
 ###完整参数
-###bash
-###yolo detect predict model=runs/detect/train-12/weights/best.pt source="视频路径.mp4" show=True save=True conf=0.5 iou=0.5
+```bash
+yolo detect predict model=runs/detect/train-12/weights/best.pt source="视频路径.mp4" show=True save=True conf=0.5 iou=0.5
+```
 
-
-场景	conf 推荐值	说明
+###场景	conf 推荐值	说明
 误检多	0.6-0.7	提高置信度，过滤错误检测
 漏检多	0.3-0.4	降低置信度，检出更多目标
 平衡	0.5	默认值
@@ -128,33 +131,36 @@ device	训练设备	（GPU） / （CPU）
 ##输出位置
 
 ###text
-###runs/detect/predict/视频名称.mp4
+###runs/detect/predict/某视频名称.mp4
 
 
-⚠️ 常见问题与解决
+##⚠️ 常见问题与解决
 1. 文件名有空格导致报错
 ❌ 错误：
 
-bash
+```bash
 source=2026-06-16 032143.mp4  # 被拆成两个参数
+```
 ✅ 正确：
 
-bash
+```bash
 source="2026-06-16 032143.mp4"
-
-2. GPU 不可用
-bash
+```
+##2. GPU 不可用
+```bash
 python -c "import torch; print(torch.cuda.is_available())"
-# 返回 False 则重装 GPU 版本
+```
+## 返回 False 则重装 GPU 版本
+```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128 --force-reinstall
+```
 
-
-3. AMP 检查卡住
+###3. AMP 检查卡住
 RTX 5070 新显卡兼容性问题，等待几分钟或使用 CPU 训练：
 
-bash
+```bash
 yolo detect train data=dataset.yaml model=yolov8n.pt epochs=100 device=cpu
-
+```
 
 4. 找不到图片或标注
 检查 dataset.yaml 中的路径是否正确：
@@ -164,15 +170,16 @@ path 是项目根目录
 train/val 是相对于 path 的路径
 
 5. 电脑自动睡眠中断训练
-bash
-# 禁止睡眠
-powercfg /change standby-timeout-ac 0
-
-# 训练完成后恢复
+```bash
+powercfg /change standby-timeout-ac 0   # 禁止睡眠
+```
+## 训练完成后恢复
+```bash
 powercfg /change standby-timeout-ac 60
+```
 
+##📈 训练效果
 
-📈 训练效果
 指标	数值
 训练图片数	158 张
 验证图片数	40 张
