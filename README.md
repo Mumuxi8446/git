@@ -89,8 +89,8 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 📊 数据集配置
 
+### 文件名:dataset.yaml
 ```bash
-dataset.yaml
 path: D:/project/git_car
 train: images/train
 val: images/val
