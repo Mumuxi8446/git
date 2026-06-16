@@ -59,7 +59,7 @@ pip install ultralytics
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 ```
-###需要安装合适版本  例如：RTX 5070 需要 CUDA 12.8+，使用 cu128 版本
+>需要安装合适版本  例如：RTX 5070 需要 CUDA 12.8+，使用 cu128 版本
 
 ### 4. 验证 GPU
 ```bash
