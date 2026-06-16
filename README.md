@@ -3,7 +3,7 @@
 > 从 LabelImg 标注到 YOLO 训练部署的完整记录
 
 ###📁 项目结构
-
+```
 D:\project\git_car
 │
 ├── dataset.yaml # 数据集配置文件
@@ -31,9 +31,9 @@ D:\project\git_car
 │└── detect\predict#识别后视频
  
 
-最佳模型"git_car\runs\detect\train-12"
+###最佳模型"git_car\runs\detect\train-12"
 
-##yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
+```yolo detect predict model=D:\project\git_car\runs\detect\train-12\weights\best.pt source="D:\project\git_car\2026-06-16-032143.mp4" show=True save=true conf=0.3
 ####清晰视频置信度以0.7为好 快速运动且较模糊置信度需≤0.3
 
 
