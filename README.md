@@ -131,8 +131,8 @@ device	训练设备	（GPU） / （CPU）
 
 ## 输出位置
 
-### text
-### runs/detect/predict/某视频名称.mp4
+>text
+>runs/detect/predict/某视频名称.mp4
 
 
 ## ⚠️ 常见问题与解决
@@ -163,7 +163,7 @@ RTX 5070 新显卡兼容性问题，等待几分钟或使用 CPU 训练：
 yolo detect train data=dataset.yaml model=yolov8n.pt epochs=100 device=cpu
 ```
 
-###4. 找不到图片或标注
+### 4. 找不到图片或标注
 >检查 dataset.yaml 中的路径是否正确：
 
 >path 是项目根目录
